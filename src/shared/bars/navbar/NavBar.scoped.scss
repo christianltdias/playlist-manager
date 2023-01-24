@@ -1,0 +1,15 @@
+@use 'variables';
+
+.nav-bar {
+  display: flex;
+  gap: variables.$gap-size;
+  align-items: center;
+
+  &.dir-row {
+    flex-direction: row;
+  }
+
+  &.dir-col {
+    flex-direction: column;
+  }
+}

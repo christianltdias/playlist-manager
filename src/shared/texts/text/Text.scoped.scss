@@ -1,0 +1,90 @@
+@use "colors";
+@use "variables";
+
+.text {
+  padding: 0 variables.$padding-narrow;
+  align-self: center;
+
+  &.small {
+    font-size: variables.$text-size-small !important;
+  }
+
+  &.medium {
+    font-size: variables.$text-size-medium !important;
+  }
+
+  &.large {
+    font-size: variables.$text-size-large !important;
+  }
+
+  &.left {
+    text-align: left;
+  }
+
+  &.center-h {
+    text-align: center;
+  }
+
+  &.right {
+    text-align: right;
+  }
+
+  &.lower {
+    text-transform: lowercase;
+  }
+
+  &.upper {
+    text-transform: uppercase;
+  }
+
+  &.capitalize {
+    text-transform: capitalize;
+  }
+
+  &.italic {
+    font-style: italic;
+  }
+
+  &.title {
+    font-size: variables.$text-size-large;
+    font-weight: bolder;
+    margin: variables.$padding-narrow;
+  }
+
+  &.subtitle {
+    font-size: variables.$text-size-medium;
+    font-weight: 600;
+  }
+
+  &.heading {
+    font-size: variables.$text-size-large;
+    font-weight: 800;
+    margin: variables.$padding-narrow;
+  }
+
+  &.subheading {
+    font-size: variables.$text-size-medium;
+    font-weight: 400;
+  }
+
+  &.caption {
+    font-size: variables.$text-size-small;
+    font-weight: 300;
+  }
+
+  &.primary {
+    color: colors.$text-color;
+  }
+
+  &.secondary {
+    color: colors.$text-color-lighter;
+  }
+
+  &.error {
+    color: colors.$error-color;
+  }
+
+  &.white {
+    color: white;
+  }
+}

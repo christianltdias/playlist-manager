@@ -1,0 +1,13 @@
+@use 'variables';
+
+.flex {
+  display: flex;
+
+  .gap {
+    gap: variables.$padding;
+  }
+
+  .no-gap {
+    gap: initial;
+  }
+}

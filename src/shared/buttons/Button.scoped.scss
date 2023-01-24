@@ -1,0 +1,165 @@
+@use 'colors';
+@use 'variables';
+
+button {
+  height: 35px;
+  padding: 0.75em 1rem;
+  cursor: pointer;
+  box-sizing: border-box;
+  border-radius: 0.5em;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: variables.$button-text-size;
+  display: inline-flex;
+  align-items: center;
+
+  &.primary {
+    color: #fff;
+    background-color: colors.$primary-color;
+    border: 1px transparent solid;
+
+    &:hover {
+      background-color: colors.$primary-color-hover;
+    }
+
+    &:disabled,
+    &:disabled:hover,
+    &.disabled,
+    &.disabled:hover {
+      color: #696e72;
+      background-color: #c1c4ca;
+    }
+  }
+
+  &.secondary {
+    border: 1px colors.$secondary-color solid;
+    color: colors.$secondary-color;
+    background-color: initial;
+
+    &:hover {
+      color: colors.$primary-color;
+      border-color: colors.$primary-color;
+    }
+
+    &:disabled,
+    &:disabled:hover,
+    &.disabled,
+    &.disabled:hover {
+      border-color: #e9ecf1;
+      color: #a9b0b6;
+      background-color: #e9ecf1;
+    }
+  }
+
+  &.nav {
+    border: 1px solid white;
+    color: white;
+    background-color: initial;
+
+    &:hover {
+      background-color: rgba(255, 255, 255, 0.4);
+    }
+
+    &:disabled,
+    &:disabled:hover,
+    &.disabled,
+    &.disabled:hover {
+      border-color: #a9b0b6;
+      color: #a9b0b6;
+      background-color: #a9b0b640;
+    }
+  }
+
+  &.tertiary {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    color: colors.$secondary-color;
+
+    &:hover {
+      color: colors.$primary-color;
+    }
+
+    &:disabled,
+    &:disabled:hover,
+    &.disabled,
+    &.disabled:hover {
+      color: #c8d1d8;
+    }
+  }
+
+  &.red {
+    border: 1px colors.$error-color solid;
+    color: colors.$error-color;
+    background-color: initial;
+
+    &:hover {
+      background-color: colors.$error-color;
+      color: white;
+    }
+
+    &:disabled,
+    &:disabled:hover,
+    &.disabled,
+    &.disabled:hover {
+      border-color: #e9ecf1;
+      color: #a9b0b6;
+      background-color: #e9ecf1;
+    }
+  }
+
+  &.link {
+    color: blue;
+    text-decoration: underline;
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+  }
+
+  &.circle {
+    flex: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-self: flex-start;
+    border-radius: 50%;
+    border-width: 2px;
+    height: auto;
+    aspect-ratio: 1 / 1;
+
+
+    &.primary {
+      color: #fff;
+      border-color: colors.$primary-color;
+      background-color: white;
+
+      &:disabled,
+      &:disabled:hover,
+      &.disabled,
+      &.disabled:hover {
+        color: #696e72;
+        border-color: #696e72;
+        background-color: #c1c4ca;
+      }
+    }
+  }
+
+  &[disabled],
+  &[disabled]:hover,
+  &.disabled,
+  &.disabled:hover {
+    cursor: not-allowed;
+  }
+
+  img {
+    height: 1.25em;
+  }
+
+  &.img-right {
+    flex-direction: row;
+  }
+
+  &.img-left {
+    flex-direction: row-reverse;
+  }
+}

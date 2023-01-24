@@ -1,0 +1,22 @@
+@use 'colors';
+@use 'variables';
+
+.icon {
+  padding: 0 variables.$padding;
+  
+  &.primary {
+    color: colors.$primary-color;
+  }
+  
+  &.secondary {
+    color: colors.$secondary-color;
+  }
+  
+  &.white {
+    color: white;
+  }
+  
+  &.error {
+    color: colors.$error-color;
+  }
+}

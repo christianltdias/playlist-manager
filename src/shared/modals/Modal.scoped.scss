@@ -1,0 +1,57 @@
+@use "variables";
+@use "colors";
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba($color: (#000), $alpha: .3);
+  overflow: auto;
+  z-index: 1;
+
+  .modal-content {
+    position: relative;
+    padding: variables.$padding;
+    background-color: white;
+    max-width: fit-content;
+    min-width: 1rem;
+    border-radius: 0.25rem;
+    box-shadow: variables.$primary-shadow;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    .modal-header {
+      position: relative;
+      padding-bottom: variables.$padding-narrow;
+      border-bottom: 1px solid rgba($color: (#000), $alpha: .1);
+      min-width: 25rem;
+
+      .modal-close {
+        position: absolute;
+        padding: 0;
+        align-items: flex-start;
+        background-color: initial;
+        border: none;
+        color: rgb(122, 122, 122);
+        font-size: 6pt;
+        top: 0;
+        right: 0;
+      }
+    }
+
+    .modal-child {
+      margin: variables.$padding 0;
+    }
+
+    .modal-footer {
+      padding-top: variables.$padding-narrow;
+    }
+
+    h4 {
+      margin: 0;
+    }
+  }
+}

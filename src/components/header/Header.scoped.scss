@@ -1,0 +1,10 @@
+@use 'variables';
+@use 'colors';
+
+.main-header{
+  min-width: 100%;
+  width: fit-content;
+  height: variables.$header-height;
+  background-color: colors.$menu-color;
+  box-shadow: variables.$primary-shadow;
+}

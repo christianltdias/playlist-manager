@@ -1,0 +1,19 @@
+@mixin hover-color($background, $text-color: null, $background-lighten: true, $text-lighten: false){
+  $bckl: if($background-lighten, 1, -1);
+  $textl: if($text-lighten, 1, -1);
+  background-color: adjust-color($color: $background, $lightness: calc(25 * $bckl));
+  
+  @if $text-color {
+    color: adjust-color($color: $text-color, $lightness: calc(25 * $textl));
+  } 
+}
+
+@mixin active-color($background, $text-color: null, $background-lighten: false, $text-lighten: false){
+  $bckl: if($background-lighten, 1, -1);
+  $textl: if($text-lighten, 1, -1);
+  background-color: adjust-color($color: $background, $lightness: calc(25 * $bckl));
+  
+  @if $text-color {
+    color: adjust-color($color: $text-color, $lightness: calc(25 * $textl));
+  } 
+}

@@ -1,0 +1,155 @@
+@use "colors";
+@use "variables";
+@use "mixins";
+
+@mixin even-line-color($color) {
+  background-color: adjust-color($color: $color, $lightness: 35%);
+}
+
+@mixin odd-line-color($color) {
+  background-color: adjust-color($color: $color, $lightness: 40%);
+}
+
+.dropdown-wrapper {
+  width: fit-content;
+  height: fit-content;
+
+  .dropdown {
+    width: fit-content;
+    padding: variables.$padding-narrow variables.$padding-narrow
+      variables.$padding-narrow variables.$padding;
+    cursor: pointer;
+    user-select: none;
+    position: relative;
+    border-radius: 0.5em;
+    font-weight: 600;
+    font-size: variables.$button-text-size;
+    text-transform: uppercase;
+
+    .dropdown-text {
+      margin-right: variables.$padding;
+    }
+
+    .dropdown-arrow {
+      font-size: 10pt;
+      min-width: 1rem;
+      text-align: center;
+    }
+
+    &.primary {
+      background-color: colors.$primary-color;
+      color: white;
+
+      &.active {
+        @include mixins.hover-color(colors.$primary-color);
+      }
+    }
+
+    &.secondary {
+      background-color: colors.$secondary-color;
+      color: white;
+
+      &.active {
+        @include mixins.hover-color(colors.$secondary-color);
+      }
+    }
+
+    &.tertiary {
+      background-color: white;
+      color: colors.$text-color;
+
+      &.active {
+        @include mixins.active-color(white);
+      }
+    }
+
+    &.red {
+      background-color: colors.$error-color;
+      color: white;
+
+      &.active {
+        @include mixins.hover-color(colors.$error-color);
+      }
+    }
+
+    &.nav {
+      border: 1px solid white;
+      color: white;
+      background-color: initial;
+  
+
+      &.active {
+        background-color: rgba(255, 255, 255, 0.4);
+      }
+    }
+
+    .dropdown-content {
+      position: absolute;
+      min-width: 160px;
+      border-color: 1px solid rgba(0, 0, 0, 0.5);
+      box-shadow: variables.$primary-shadow;
+      z-index: 1;
+
+      .content-item {
+        padding: variables.$padding;
+        text-transform: uppercase;
+        font-weight: 500;
+
+        &.primary {
+          color: colors.$text-color;
+          @include odd-line-color(colors.$primary-color);
+
+          &:hover {
+            @include mixins.hover-color(colors.$primary-color);
+          }
+        }
+
+        &.secondary {
+          @include even-line-color(colors.$secondary-color);
+
+          &:hover {
+            @include mixins.hover-color(colors.$secondary-color);
+          }
+        }
+
+        &.tertiary {
+          @include even-line-color(white);
+          border-bottom: 1px solid rgba(0, 0, 0, 0.158);
+
+          &:hover {
+            @include mixins.active-color(white);
+          }
+        }
+
+        &.red {
+          color: rgb(139, 17, 17);
+          @include even-line-color(colors.$error-color);
+
+          &:hover {
+            @include mixins.hover-color(colors.$error-color);
+          }
+        }
+
+        &.nav {
+          @include even-line-color(white);
+          border-bottom: 1px solid rgba(0, 0, 0, 0.158);
+          color: colors.$text-color;
+
+          &:hover {
+            @include mixins.active-color(white);
+          }
+        }
+      }
+    }
+  }
+
+  .disabled {
+    background-color: #c1c4ca !important;
+    cursor: not-allowed;
+    * {
+      color: #696e72;
+      border-color: #696e72;
+      background-color: #c1c4ca !important;
+    }
+  }
+}

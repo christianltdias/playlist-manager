@@ -1,0 +1,18 @@
+{
+  "root": "/",
+  "home": "/home",
+  "rooms": {
+    "rooms": "/rooms",
+    "room": "/rooms/:id",
+    "newRoom": "/rooms/new",
+    "editRoom": "/rooms/edit"
+  },
+  "users": {
+    "users": "/users",
+    "user": "/users/:id",
+    "newUser": "/users/new",
+    "editUser": "/users/:id/edit"
+  },
+  "notFound": "/not-found",
+  "notImplemented": "/not-implemented"
+}

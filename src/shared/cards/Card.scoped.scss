@@ -1,0 +1,31 @@
+@use 'variables';
+
+@mixin card-padding {
+  padding: variables.$padding-narrow 0;
+}
+
+.card {
+  background-color: white;
+  box-shadow: variables.$primary-shadow;
+  padding: variables.$padding;
+  margin: variables.$padding;
+  border-radius: variables.$border-radius;
+
+  .card-header {
+    @include card-padding;
+  }
+
+  .card-title {
+    margin: 0 0;
+    @include card-padding;
+  }
+
+  .card-content {
+    @include card-padding;
+  }
+
+  .card-footer {
+    @include card-padding;
+    border-top: variables.$opaque-border;
+  }
+}

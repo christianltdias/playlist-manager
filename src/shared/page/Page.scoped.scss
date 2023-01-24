@@ -1,0 +1,14 @@
+@use 'variables';
+
+.page-header {
+  background-color: white;
+  height: 3rem;
+  padding: variables.$padding;
+
+  .page-title {
+    align-self: center;
+  }
+}
+
+.page-content{
+}
