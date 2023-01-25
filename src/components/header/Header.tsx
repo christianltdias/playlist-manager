@@ -33,7 +33,7 @@ const Header: React.FC = () => {
     {
       key: "Test 1",
       element: (
-        <Button buttonType={"nav"} key={"test1"}>
+        <Button buttonType={"secondary"} key={"test1"}>
           Primary
         </Button>
       ),
@@ -41,7 +41,7 @@ const Header: React.FC = () => {
     {
       key: "Long Test",
       element: (
-        <Button buttonType={"nav"} key={"test2"}>
+        <Button buttonType={"secondary"} key={"test2"}>
           Secondary
         </Button>
       ),
@@ -49,7 +49,7 @@ const Header: React.FC = () => {
     {
       key: "Jujuba",
       element: (
-        <Button buttonType={"nav"} key={"test3"}>
+        <Button buttonType={"secondary"} key={"test3"}>
           Tertiary
         </Button>
       ),
@@ -57,7 +57,7 @@ const Header: React.FC = () => {
     {
       key: "Jujuba",
       element: (
-        <Button buttonType={"nav"} key={"test4"}>
+        <Button buttonType={"secondary"} key={"test4"}>
           Red
         </Button>
       ),
@@ -65,7 +65,7 @@ const Header: React.FC = () => {
     {
       key: "Jujuba",
       element: (
-        <Button buttonType={"nav"} key={"test5"}>
+        <Button buttonType={"secondary"} key={"test5"}>
           Link
         </Button>
       ),
@@ -73,7 +73,7 @@ const Header: React.FC = () => {
     {
       key: "Jujuba",
       element: (
-        <Button buttonType={"nav"} key={"test6"}>
+        <Button buttonType={"secondary"} key={"test6"}>
           Nav
         </Button>
       ),
@@ -81,7 +81,7 @@ const Header: React.FC = () => {
     {
       key: "Drop",
       element: (
-        <Dropdown key={"drop"} type="nav" items={dropdownItems}>
+        <Dropdown key={"drop"} type="secondary" items={dropdownItems}>
           Options
         </Dropdown>
       ),
@@ -93,13 +93,13 @@ const Header: React.FC = () => {
   if(isWindowSizeLowerThan(size.width, WindowSize.LARGE)) {
     if(isOpen) {
       menu = (
-        <Icon color="white">
+        <Icon color="secondary">
           <span className="material-symbols-outlined">menu_open</span>
         </Icon>
       )
     } else {
       menu = (
-        <Icon color="white">
+        <Icon color="secondary">
           <span className="material-symbols-outlined">menu</span>
         </Icon>
       )
@@ -116,12 +116,12 @@ const Header: React.FC = () => {
       <FlexRow
         align="center">
           {menu}
-        <Text color="white" type="title" textStyle="italic">
+        <Text type="title" textStyle="italic">
           Playlist Manager
         </Text>
       </FlexRow>
       <NavBar className="nav-bar" navButtons={navButtons} />
-      <Icon color="white">
+      <Icon color="secondary">
         <span className="material-symbols-outlined">login</span>
       </Icon>
     </FlexRow>

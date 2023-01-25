@@ -8,7 +8,7 @@
   right: 0;
   z-index: 900;
   height: variables.$header-height;
-  background-color: colors.$menu-color;
+  background: colors.$menu-color;
   box-shadow: variables.$secondary-shadow;
 
   @media only screen and (max-width: variables.$LARGE) {

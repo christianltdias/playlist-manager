@@ -22,6 +22,27 @@
       height: 100%;
       object-fit: cover;
     }
+
+    .home-img-content{
+      position: absolute;
+      z-index: 2;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 30rem;
+
+      .home-img-left {
+        flex: 1;
+      }
+
+      .home-img-right {
+        flex: 1;
+      }
+
+      h1, span {
+        color: white;
+      }
+    }
   }
   
   .home-content {
