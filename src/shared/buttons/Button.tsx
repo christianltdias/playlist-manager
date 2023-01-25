@@ -1,3 +1,4 @@
+import { StringifyOptions } from "querystring";
 import "./Button.scoped.scss";
 
 export interface IButtonProps {
@@ -19,6 +20,7 @@ export interface IButtonProps {
   children?: React.ReactNode;
   /** Optional. Determines if the button is disabled. */
   isDisabled?: boolean;
+  className?: string,
 }
 
 const Button: React.FC<IButtonProps> = ({
@@ -31,9 +33,10 @@ const Button: React.FC<IButtonProps> = ({
   tooltip,
   isDisabled,
   onClick,
+  className
 }) => (
   <button
-    className={`${buttonType} img-${imgPlacement}`}
+    className={`${buttonType} img-${imgPlacement} ${className}`}
     onClick={onClick}
     disabled={isDisabled}
     id={id}

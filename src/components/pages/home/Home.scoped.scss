@@ -1,0 +1,30 @@
+.home-wrapper {
+  min-height: 100%;
+  background-color: white;
+
+  .home-img-wrapper {
+    position: relative;
+    width: 100%;
+    height: 30rem;
+
+    &:before {
+      content: "";
+      position: absolute;
+      z-index: 1;
+      background-color: black;
+      opacity: 0.4;
+      width: 100%;
+      height: 30rem;
+    }
+
+    .home-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  
+  .home-content {
+    width: 100%;
+  }
+}

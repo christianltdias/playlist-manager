@@ -5,10 +5,8 @@ import Routing from "./routes/Routing";
 function App() {
   return (
     <>
-      <Header/>
-      <div className="content">
-        <Routing />
-      </div>
+      <Header />
+      <Routing />
     </>
   );
 }

@@ -88,7 +88,7 @@
       min-width: 160px;
       border-color: 1px solid rgba(0, 0, 0, 0.5);
       box-shadow: variables.$primary-shadow;
-      z-index: 1;
+      z-index: 999;
 
       .content-item {
         padding: variables.$padding;

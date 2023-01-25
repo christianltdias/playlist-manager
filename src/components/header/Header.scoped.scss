@@ -2,9 +2,18 @@
 @use 'colors';
 
 .main-header{
-  min-width: 100%;
-  width: fit-content;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 900;
   height: variables.$header-height;
   background-color: colors.$menu-color;
-  box-shadow: variables.$primary-shadow;
+  box-shadow: variables.$secondary-shadow;
+
+  @media only screen and (max-width: variables.$LARGE) {
+    .nav-bar {
+      display: none;
+    }
+  }
 }

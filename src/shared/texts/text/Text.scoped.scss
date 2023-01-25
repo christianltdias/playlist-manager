@@ -48,7 +48,7 @@
   &.title {
     font-size: variables.$text-size-large;
     font-weight: bolder;
-    margin: variables.$padding-narrow;
+    padding: variables.$padding-narrow;
   }
 
   &.subtitle {
@@ -59,7 +59,7 @@
   &.heading {
     font-size: variables.$text-size-large;
     font-weight: 800;
-    margin: variables.$padding-narrow;
+    padding: variables.$padding-narrow;
   }
 
   &.subheading {

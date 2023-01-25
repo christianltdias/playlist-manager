@@ -1,3 +1,4 @@
+import FlexCol from "../layout/flex/flex-col/FlexCol";
 import FlexRow from "../layout/flex/flex-row/FlexRow";
 import Text from "../texts/text/Text";
 import "./Page.scoped.scss";
@@ -24,7 +25,8 @@ const Page: React.FC<IPageProps> = (
 ) => {
   const mustShowHeader: boolean = showHeader || !!(name || headerButtons.length);
   return (
-    <>
+    <FlexCol
+      className="page">
       { mustShowHeader && 
         <FlexRow
           className="page-header"
@@ -42,7 +44,7 @@ const Page: React.FC<IPageProps> = (
       <div className="page-content">
         {children}
       </div>
-    </>
+    </FlexCol>
   );
 }
 
